@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News feed</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/posts.css">
+</head>
+<body>
+<!--
+### Лента сообщений и форма для сообщений
+Нужно написать свою программу которая слева выводит список сообщений,
+а справа находится форма для добавления этих сообщений.
+
+Каждое сообщение можно:
+* Показать полностью (если больше 500 знаков)
+* Лайкнуть (с подсчетом лайков)
+* Показать все комментарии
+* Написать комментарий
+-->
+
+<div class="container">
+  <div class="row">
+    <!-- Posts -->
+    <section class="col-6">
+      <h1> News Feed</h1>
+
+      <div id="posts" class="row"></div>
+    </section>
+
+    <!-- Post constructor -->
+    <section id="constructor" class="col-6">
+      <h2>Post constructor</h2>
+
+      <form action="/" name="postForm" id="postForm" method="post">
+        <div class="row">
+          <label for="postAuthor" class="col-sm-2 col-form-label">Author*</label>
+          <div class="col-sm-10">
+            <input type="text" name="author" id="postAuthor" class="form-control" placeholder="Ex. Tom Raider" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="about" class="col-sm-2 col-form-label">Post Text*</label>
+          <div class="col-sm-10">
+            <textarea name="about" id="about" cols="20" rows="10" class="form-control" placeholder="Post text" required></textarea>
+          </div>
+        </div>
+
+        <!--<div class="row">
+          <div class="col-12">
+            <img src="https://via.placeholder.com/400x150" alt="img" id="imagePreload" class="w-100">
+          </div>
+        </div>-->
+
+        <div class="row">
+          <label for="image_url" class="col-sm-2 col-form-label">Image url*</label>
+          <div class="col-sm-10">
+            <input type="url" name="image_url" id="image_url" class="form-control" placeholder="Enter image url" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-warning w-100">Submit Post</button>
+      </form>
+    </section>
+  </div>
+</div>
+
+<script src="js/course_work.js"></script>
+</body>
+</html>
